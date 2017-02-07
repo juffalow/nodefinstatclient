@@ -1,9 +1,23 @@
 # Node.js FinStat client
 
+## Installation
+
+With [npm](https://www.npmjs.com/) :
+
+```
+npm install finstatclient
+```
+
+With [yarn](https://yarnpkg.com/) :
+
+```
+yarn add finstatclient
+```
+
 ## Example
 
 ```
-var finstatclient = require('./index.js')('<api key>', '<private key>');
+var finstatclient = require('finstatclient')('<api key>', '<private key>');
 
 finstatclient.getCompanyDetail("35757442", function(data) {
     console.log(data);

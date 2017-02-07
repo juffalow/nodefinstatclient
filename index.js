@@ -40,8 +40,8 @@ module.exports = function(apiKey, privateKey) {
             fetchCompanyDetail(ICO, 'ultimate', callback, errorCallback);
         },
 
-        getSuggestions(query) {
-
+        getSuggestions(query, callback, errorCallback) {
+            fetchSuggestions(query, callback, errorCallback);
         }
     }
 
@@ -62,6 +62,30 @@ module.exports = function(apiKey, privateKey) {
             if( !error && response.statusCode == 200 ) {
                 parseString(body, {explicitArray: false, ignoreAttrs: true}, function(err, result) {
                     callback(result.DetailResult);
+                });
+            } else {
+                errorCallback(response.statusCode);
+            }
+        });
+    }
+
+    function fetchSuggestions(query, callback, errorCallback) {
+        var params = {
+            query: query,
+            apiKey: apiKey,
+            Hash: getVerificationHash(query)
+        };
+
+        var options = {
+            url: 'http://www.finstat.sk/api/autocomplete',
+            method: 'POST',
+            json: params
+        };
+
+        request(options, function(error, response, body) {
+            if( !error && response.statusCode == 200 ) {
+                parseString(body, {explicitArray: false, ignoreAttrs: true}, function(err, result) {
+                    callback(result.ApiAutocomplete);
                 });
             } else {
                 errorCallback(response.statusCode);

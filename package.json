@@ -1,6 +1,6 @@
 {
   "name": "finstatclient",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Node.js client for FinStat API",
   "main": "index.js",
   "repository": {
