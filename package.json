@@ -1,0 +1,16 @@
+{
+  "name": "finstatclient",
+  "version": "1.0.0",
+  "description": "Node.js client for FinStat API",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juffalow/nodefinstatclient.git"
+  },
+  "license": "MIT",
+  "author": "Matej Jellus <juffalow@juffalow.com> (https://www.juffalow.com/)",
+  "dependencies": {
+    "request": "^2.79.0",
+    "xml2js": "^0.4.17"
+  }
+}
