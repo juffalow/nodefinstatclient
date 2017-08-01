@@ -1,5 +1,7 @@
 # Node.js FinStat client
 
+[![npm version](https://img.shields.io/npm/v/finstatclient.svg?style=flat)](https://www.npmjs.com/package/finstatclient) [![npm downloads](https://img.shields.io/npm/dm/finstatclient.svg?style=flat)](https://www.npmjs.com/package/finstatclient)
+
 ## Installation
 
 With [npm](https://www.npmjs.com/) :
